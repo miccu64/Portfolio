@@ -1,6 +1,8 @@
+# Krakowskie Zabytki
 Aplikacja wykonana dla WUOZ w Krakowie.
+## Opis
 Jest to CRUDowa Progressive Web App.
-Wykona≥em niemal ca≥y frontend. Odpowiada≥em takøe w duøej mierze za ≥πczenie frontu z serwerem.
-Strona zosta≥a oparta na Bootstrapie, dziÍki czemu jest responsywna. Korzysta takøe z JQuery.
-Aplikacja umoøliwia dodawanie, podglπd i edycjÍ zabytkÛw.
-Strona zosta≥a wykonana w HTML + CSS + JavaScript.
+Wykona≈Çem niemal ca≈Çy frontend. Odpowiada≈Çem tak≈ºe w du≈ºej mierze za ≈Ç≈°czenie frontu z serwerem.
+Strona zosta≈Ça oparta na Bootstrapie, dziƒôki czemu jest responsywna. Korzysta tak≈ºe z JQuery.
+Aplikacja umo≈ºliwia dodawanie, podgl≈°d i edycjƒô zabytk√≥w.
+Strona zosta≈Ça wykonana w HTML + CSS + JavaScript.
