@@ -1,2 +1,0 @@
-Jest to program bêd¹cy zegarkiem napisany w jêzyku C.
-Program przeznaczony dla Arduino Uno (Atmega328P) z p³ytk¹ peryferyjn¹.
