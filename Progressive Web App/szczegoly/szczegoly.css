@@ -1,0 +1,34 @@
+.odstep {
+    margin-top: calc(5px + 1vw);
+}
+
+.odstep2 {
+    margin-top: calc(5px + .5vw);
+}
+
+.odstep3 {
+    margin-top: calc(20px + 2vw);
+}
+
+.tekst {
+    font-size: 130%;
+}
+
+#mapid {
+    height: calc(300px + 10vw);
+    width: 100%;
+}
+
+.naglowek {
+    font-size: 200%;
+}
+
+.przycisk {
+    font-size: 150%;
+}
+
+.blad {
+    font-size: 180%;
+    color: red;
+    font-weight: 700;
+}

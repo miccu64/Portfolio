@@ -1,0 +1,26 @@
+.odstep {
+    margin-top: calc(20px + 1vw);
+}
+
+.odstep2 {
+    margin-top: calc(5px + 0.3vw);
+}
+
+.naglowki {
+    font-size: calc(120% + .5vw);
+    color: white;
+}
+
+.naglowki2 {
+    font-size: calc(110% + .5vw);
+    font-weight: 600;
+}
+
+.zdjecia {
+    width: calc(100% + 1vw);
+    height: calc(100% + 1vw);
+}
+
+.tekst {
+    font-size: calc(90% + .5vw);
+}

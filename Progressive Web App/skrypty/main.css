@@ -1,0 +1,24 @@
+.naglowki {
+    font-size: calc(110% + .5vw);
+    color: white;
+}
+
+.skaluj {
+    width: 100%;
+    height: auto;
+}
+
+.mniejsze {
+    width: 65%;
+    /*height: 65%;*/
+}
+
+.top-right {
+    position: absolute;
+    top: 8%;
+    right: 15%;
+    font-size: calc(80% + 3vw);
+    /*responsywna czcionka*/
+    color: white;
+    font-weight: 700;
+}

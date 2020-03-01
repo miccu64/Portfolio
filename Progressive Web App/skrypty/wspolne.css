@@ -1,0 +1,36 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #f2f2f2;
+    min-height: 100vh;
+    position: relative;
+    margin: 0;
+}
+
+.navbar-dark .navbar-toggler-icon {
+    padding: 15px !important;
+}
+
+.tlo {
+    background-color: #f2f2f2;
+}
+
+.bg-custom {
+    background-color: #4c1f02;
+}
+
+.linki {
+    font-size: 200%;
+}
+
+.footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #4c1f02;
+    color: white;
+    text-align: center;
+}

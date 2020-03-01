@@ -1,0 +1,22 @@
+#mapid {
+    height: calc(180px + 10vw);
+    width: 100%;
+}
+
+.nazwa {
+    font-size: 150%;
+    color: #800000;
+    margin-top: calc(5px + .5vw);
+}
+
+.odstep {
+    margin-top: calc(20px + 1vw);
+}
+
+.tekst {
+    font-size: 150%;
+}
+
+.odstep2 {
+    margin-top: calc(10px + 0.5vw);
+}

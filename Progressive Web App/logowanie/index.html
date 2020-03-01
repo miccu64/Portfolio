@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="pl">
+
+<head>
+    <script src="/pwabuilder-sw-register.js"></script>
+    <link rel="apple-touch-icon" href="/zdjecia/ikona/192.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#4c1f02">
+    <meta name="Keywords" content="Kraków zabytki Krakowa zgłoś przeglądaj">
+    <meta name="Description" content="Zabytki Krakowa">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/skrypty/bootstrap.min.css">
+    <script src="/skrypty/jquery-3.4.1.min.js"></script>
+    <script src="/skrypty/bootstrap.min.js"></script>
+    <script src="/skrypty/jwt-decode.min.js"></script>
+
+    <title>Krakowskie zabytki</title>
+    <link rel="icon" href="/zdjecia/ikona/16.png">
+    <link rel="stylesheet" href="logowanie.css">
+    <link rel="stylesheet" href="/skrypty/wspolne.css">
+    <link rel="manifest" href="/manifest.json">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-custom justify-content-left navbar-dark">
+        <a class="navbar-brand" href="/">
+            <img class="img-fluid" src="/zdjecia/logo_male.jpg" style="width:60px;" alt="logoWUOZ">
+        </a>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a id="zalogowany2" class="nav-link linki" href="/logowanie">Logowanie</a>
+            </li>
+            <li class="nav-item">
+                <a id="niezalogowany" class="nav-link linki" onclick="wyloguj()" href="/">Wyloguj</a>
+            </li>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <li class="nav-item">
+                    <a class="nav-link linki" href="/">Strona główna</a>
+                </li>
+                <li class="nav-item">
+                    <a id="zalogowany3" class="nav-link linki" href="/rejestracja">Rejestracja</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link linki" href="/kontakt">Kontakt</a>
+                </li>
+                <script src="/skrypty/navbar.js"></script>
+            </div>
+        </ul>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+
+    <div class="container-xl justify-content-center align-items-center">
+        <div class="row justify-content-center">
+            <div class="col-12 odstep3"></div>
+            <div class="col-12 col-md-6 text-center tekst">
+                <div class="naglowek"><b>Logowanie</b></div>
+
+                <div class="col-12 odstep"></div>
+                <form id="add-form">
+                    <div class="form-row">
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label class="tekst odstep2" for="poczta">Adres e-mail</label>
+                                <input pattern=".{6,}" title="E-mail musi zawierać co najmniej 6 znaków" type="email" class="form-control form-control-lg tekst" id="poczta" aria-describedby="emailHelp" required>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label class="tekst odstep2" for="haslo">Hasło</label>
+                                <input pattern=".{8,20}" title="Hasło musi zawierać od 8 do 20 znaków" type="password" class="form-control form-control-lg tekst" id="haslo" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="odstep3"></div>
+                    <button type="submit" class="btn btn-primary btn-lg przycisk"><b>Zaloguj</b></button>
+                    <script src="logowanie.js"></script>
+                </form>
+                <div class="odstep4"></div>
+                <div class="col-12 tekst">
+                    Nie posiadasz konta? <a href="/rejestracja/">Zarejestruj się!</a>
+                </div>
+                <div class="odstep5"></div>
+                <!--NIE PAMIETASZ HASLA?-->
+            </div>
+        </div>
+    </div>
+    <div class="footer">2020 © Wszelkie prawa zastrzeżone.</div>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+.naglowek {
+    font-size: 200%;
+}
+
+.odstep {
+    margin-top: calc(5px + 1vw);
+}
+
+.odstep2 {
+    margin-top: calc(5px + .5vw);
+}
+
+.odstep3 {
+    margin-top: calc(20px + 2vw);
+}
+
+.tekst {
+    font-size: 130%;
+}
+
+.wieksze {
+    height: 200%;
+}
+
+.przycisk {
+    font-size: 150%;
+}

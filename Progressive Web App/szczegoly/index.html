@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="pl">
+
+<head>
+    <link rel="apple-touch-icon" href="/zdjecia/ikona/192.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#4c1f02">
+    <meta name="Keywords" content="Kraków zabytki Krakowa zgłoś przeglądaj">
+    <meta name="Description" content="Zabytki Krakowa">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/skrypty/bootstrap.min.css">
+    <script src="/skrypty/jquery-3.4.1.min.js"></script>
+    <script src="/skrypty/bootstrap.min.js"></script>
+    <script src="/skrypty/ekko-lightbox.min.js"></script>
+
+    <title>Szczegóły zabytku</title>
+    <link rel="icon" href="/zdjecia/ikona/16.png">
+    <link rel="stylesheet" href="szczegoly.css">
+    <link rel="stylesheet" href="/skrypty/wspolne.css">
+    <link rel="manifest" href="/manifest.json">
+
+    <link rel="stylesheet" href="/skrypty/leaflet.css" />
+    <script src="/skrypty/leaflet.js"></script>
+
+</head>
+<!-- DODAĆ CAPTCHA -->
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-custom justify-content-left navbar-dark">
+        <a class="navbar-brand" href="/">
+            <img class="img-fluid" src="/zdjecia/logo_male.jpg" style="width:60px;" alt="logoWUOZ">
+        </a>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a id="zalogowany2" class="nav-link linki" href="/logowanie">Logowanie</a>
+            </li>
+            <li class="nav-item">
+                <a id="niezalogowany" class="nav-link linki" onclick="wyloguj()" href="/">Wyloguj</a>
+            </li>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <li class="nav-item">
+                    <a class="nav-link linki" href="/">Strona główna</a>
+                </li>
+                <li class="nav-item">
+                    <a id="zalogowany3" class="nav-link linki" href="/rejestracja">Rejestracja</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link linki" href="/kontakt">Kontakt</a>
+                </li>
+                <script src="/skrypty/navbar.js"></script>
+            </div>
+        </ul>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+
+    <div class="container-xl justify-content-center align-items-center">
+        <div class="row">
+            <div class="col-12 odstep"></div>
+            <div class="col-12 text-center tekst">
+                <div class="naglowek"><b>Szczegóły zabytku</b></div>
+                <script>
+                    $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+                        event.preventDefault();
+                        $(this).ekkoLightbox();
+                    });
+                </script>
+
+
+                <div class="col-12 odstep"></div>
+                <form>
+                    <div class="form-row">
+                        <div class="col-12 col-md-6 ">
+                            <div class="form-group">
+                                <label class="tekst odstep2" for="nazwa">Nazwa obiektu</label>
+                                <input type="text" class="form-control form-control-lg tekst" id="nazwa" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label class="tekst odstep2" for="ulica">Ulica</label>
+                                <input type="text" class="form-control form-control-lg tekst" id="street" disabled>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="form-row">
+                                <div class="form-group col-6">
+                                    <label class="tekst odstep2" for="wspx">Współrzędna X</label>
+                                    <input type="number" step="any" class="form-control form-control-lg tekst" id="wspx" disabled>
+                                </div>
+                                <div class="form-group col-6">
+                                    <label class="tekst odstep2" for="wspy">Współrzędna Y</label>
+                                    <input type="number" step="any" class="form-control form-control-lg tekst" id="wspy" disabled>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-6">
+                                    <label class="tekst odstep2" for="numer">Numer budynku</label>
+                                    <input type="text" class="form-control form-control-lg tekst" id="numer" disabled>
+                                </div>
+                                <div class="form-group col-6">
+                                    <label class="tekst odstep2" for="typ">Typ obiektu</label>
+                                    <input type="text" class="form-control form-control-lg tekst" id="typ" disabled>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="odstep3"></div>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <h3>Data dodania:</h3>
+                            <div id="dataDod" class="tekst"></div>
+                            <div class="odstep2"></div>
+                            <h3>Dodano przez:</h3>
+                            <div id="dodal" class="tekst"></div>
+                        </div>
+                        <div class="col-6">
+                            <h3>Data ostatniej edycji:</h3>
+                            <div id="dataEd" class="tekst">-</div>
+                            <div class="odstep2"></div>
+                            <h3>Ostatnio edytowane przez:</h3>
+                            <div id="edytowal" class="tekst">-</div>
+                        </div>
+                    </div>
+
+                    <div id="opis" class="odstep3">
+                        <h4>(Kliknij zdjęcie, by je powiększyć)</h4>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-10">
+                            <div class="row justify-content-center align-items-center mb-4">
+                                <div id="archNapis" class="col-12 odstep">
+                                    <h3>Zdjęcie archiwalne</h3>
+                                </div>
+                                <a id="arch1" data-toggle="lightbox" data-gallery="example-gallery" class="col-md-4 col-6 col-xl-3">
+                                    <img id="arch11" class="img-fluid">
+                                </a>
+                            </div>
+                            <div class="row justify-content-center align-items-center">
+                                <div id="recentNapis" class="col-12">
+                                    <h3>Zdjęcia aktualne</h3>
+                                </div>
+                                <a id="recent2" data-toggle="lightbox" data-gallery="example-gallery" class="col-md-3 col-4 col-xl-2">
+                                    <img id="recent22" class="img-fluid">
+                                </a>
+                                <a id="recent1" data-toggle="lightbox" data-gallery="example-gallery" class="col-md-3 col-4 col-xl-2">
+                                    <img id="recent11" class="img-fluid">
+                                </a>
+                                <a id="recent0" data-toggle="lightbox" data-gallery="example-gallery" class="col-md-3 col-4 col-xl-2">
+                                    <img id="recent00" class="img-fluid">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-center align-items-center odstep3">
+                        <div class="col-12 px-5">
+                            <div>
+                                <h3>Mapa</h3>
+                            </div>
+                            <div id="mapid">
+                            </div>
+                        </div>
+                        <div class="col-12 odstep3"></div>
+                    </div>
+                    <div class="form-group row justify-content-center align-items-center">
+                        <div class="col-lg-9">
+                            <label class="tekst" for="poleTekstowe">Opis zabytku</label>
+                            <textarea class="form-control tekst" id="poleTekstowe" rows="6" placeholder="Brak opisu. Dodaj własny!" disabled></textarea>
+                        </div>
+                    </div>
+                    <div class="odstep3"></div>
+
+                    <div class="blad" id="blad2"></div>
+                    <div class="odstep"></div>
+                    <button type="button" class="btn btn-primary btn-lg przycisk" onclick="edycja()"><b>Edytuj</b></button>
+                    <button type="button" class="btn btn-primary btn-lg przycisk" onclick="wstecz()"><b>Powrót</b></button>
+
+                    <div class="odstep3"></div>
+                    <script src="skryptySzczeg.js"></script>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <div class="footer">2020 © Wszelkie prawa zastrzeżone.</div>
+</body>
+
+</html>

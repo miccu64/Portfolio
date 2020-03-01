@@ -1,0 +1,64 @@
+{
+    "name": "Krakowskie Zabytki",
+    "short_name": "Zabytki",
+	"description": "Zabytki w Krakowie",
+	"version": "1.0",
+    "icons": [
+        {
+            "src": "/zdjecia/ikona/16.png",
+            "type": "image/png",
+            "sizes": "16x16"
+        },
+        {
+            "src": "/zdjecia/ikona/20.png",
+            "type": "image/png",
+            "sizes": "20x20"
+        },
+		{
+            "src": "/zdjecia/ikona/24.png",
+            "type": "image/png",
+            "sizes": "24x24"
+        },
+		{
+            "src": "/zdjecia/ikona/32.png",
+            "type": "image/png",
+            "sizes": "32x32"
+        },
+		{
+            "src": "/zdjecia/ikona/48.png",
+            "type": "image/png",
+            "sizes": "48x48"
+        },
+		{
+            "src": "/zdjecia/ikona/64.png",
+            "type": "image/png",
+            "sizes": "64x64"
+        },
+		{
+            "src": "/zdjecia/ikona/128.png",
+            "type": "image/png",
+            "sizes": "128x128"
+        },
+		{
+            "src": "/zdjecia/ikona/192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+		{
+            "src": "/zdjecia/ikona/256.png",
+            "type": "image/png",
+            "sizes": "256x256"
+        },
+		{
+            "src": "/zdjecia/ikona/512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "start_url": "/",
+    "theme_color": "#4c1f02",
+    "background_color": "#f2f2f2",
+    "display": "standalone",
+	"orientation" : "any",
+	"lang" : "Polish"
+}
